@@ -1,11 +1,7 @@
 /**
  * Increment any package.json version following semver.
  *
- * Use from an other node script :
- * const {semverIncrement, incrementPackage, getPackageVersion} = require('./semver-increment')
- *
- * Use from CLI to increment package.json version :
- * node semver-increment {major|minor|patch}
+ * const {semverIncrement, incrementPackage, getPackageVersion} = require('semver-increment')
  *
  * Semver notation Major.Minor.Patch :
  * Major is X.0.0
@@ -65,30 +61,3 @@ module.exports = {
 		return JSON.parse( fs.readFileSync( packagePath ) ).version;
 	}
 }
-
-/**
- * Expose shell function
- */
-processify({
-	0: 'patch',
-	1: 'package.json'
-}, function (args)
-{
-	// Get increment name
-	const incrementName = args[0].toLowerCase();
-	const validIncrementNames = [
-		'major',
-		'minor',
-		'patch'
-	];
-
-	// Get increment index and check its validity
-	const incrementIndex = validIncrementNames.indexOf( incrementName );
-	if (incrementIndex === -1)
-	{
-		error(`Invalid increment argument. Valid values :\n-> ${validIncrementNames.join(' / ')}\n\nex: npm run increment patch`);
-	}
-
-	// Increment package.json
-	module.exports.incrementPackage(args[1], incrementIndex);
-});

@@ -1,5 +1,5 @@
 {
-  "name": "semver-increment",
+  "name": "@zouloux/semver-increment",
   "version": "0.1.0",
   "description": "Allow package.json version management from node or CLI.",
   "main": "index.js",
@@ -10,6 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/zouloux/semver-increment.git"
   },
+  "private": false,
   "keywords": [
     "semver",
     "package",
