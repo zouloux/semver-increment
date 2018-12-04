@@ -26,6 +26,10 @@ module.exports = {
 	{
 		const splittedVersion = version.split('.');
 		splittedVersion[ semverIndex ] = parseInt(splittedVersion[ semverIndex ], 10) + 1;
+		while (semverIndex < 2)
+		{
+			splittedVersion[ ++semverIndex ] = '0';
+		}
 		return splittedVersion.join('.');
 	},
 
