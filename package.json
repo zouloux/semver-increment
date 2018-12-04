@@ -1,0 +1,30 @@
+{
+  "name": "semver-increment",
+  "version": "0.1.0",
+  "description": "Allow package.json version management from node or CLI.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zouloux/semver-increment.git"
+  },
+  "keywords": [
+    "semver",
+    "package",
+    "json",
+    "increment",
+    "node",
+    "cli",
+    "major",
+    "minor",
+    "patch"
+  ],
+  "author": "Alexis Bouhet",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zouloux/semver-increment/issues"
+  },
+  "homepage": "https://github.com/zouloux/semver-increment#readme"
+}
